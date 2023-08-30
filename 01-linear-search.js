@@ -9,6 +9,7 @@ function linearSearch(array, item) {
       return i;
     }
   }
+
   return -1;
 }
 
