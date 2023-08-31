@@ -1,3 +1,5 @@
+"use strict";
+
 const map = new Map();
 const objKey = { id: 5 };
 map.set(objKey, "amalumian");

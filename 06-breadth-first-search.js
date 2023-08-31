@@ -1,3 +1,5 @@
+"use strict";
+
 const graph = {};
 graph.a = ["b", "c"];
 graph.b = ["f"];

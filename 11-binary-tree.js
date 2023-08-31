@@ -1,3 +1,5 @@
+"use strict";
+
 class BinaryTree {
   constructor() {
     this.root = null;

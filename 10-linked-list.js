@@ -1,3 +1,5 @@
+"use strict";
+
 class LinkedList {
   constructor() {
     this.size = 0;

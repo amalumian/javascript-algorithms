@@ -1,3 +1,5 @@
+"use strict";
+
 const tree = [
   {
     v: 5,
