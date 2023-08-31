@@ -28,10 +28,7 @@ console.log("O(log n)");
 console.log("==============");
 console.log("Iterative method");
 console.log("Result =", binarySearch(array, 3));
-
-//////////////////////////////
 console.log("==============");
-//////////////////////////////
 
 function recursiveBinarySearch(array, item, low, high) {
   let mid = Math.floor((low + high) / 2);
