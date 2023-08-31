@@ -19,3 +19,17 @@ const fibonachi = (n) => {
 };
 
 console.log("Fibonachi =", fibonachi(8));
+
+function sumRecursive(arr) {
+  if (arr.length === 0) return 0;
+  return arr[0] + sumRecursive(arr.slice(1));
+}
+
+console.log("Sum recursive=", sumRecursive([1, 2, 3, 4]));
+
+function recursiveCout(arr) {
+  if (arr.length === 0) return 0;
+  return 1 + recursiveCout(arr.slice(1));
+}
+
+console.log("Recursive count", recursiveCout([1, 2, 3, 4]));
