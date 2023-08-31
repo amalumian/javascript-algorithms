@@ -2,51 +2,47 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 let count = 0;
 
 function binarySearch(array, item) {
-  let start = 0;
-  let end = array.length;
-  let middle;
-  let found = false;
-  let position = -1;
+  let low = 0;
+  let high = array.length - 1;
 
-  while (found === false && start <= end) {
+  while (low <= high) {
     count += 1;
-    middle = Math.floor((start + end) / 2);
+    let mid = Math.floor((low + high) / 2);
+    let guess = array[mid];
 
-    if (array[middle] === item) {
-      found = true;
-      position = middle;
-      return position;
-    }
-
-    if (item < array[middle]) {
-      end = middle - 1;
+    if (guess === item) {
+      return mid;
+    } else if (guess > item) {
+      high = mid - 1;
     } else {
-      start = middle + 1;
+      low = mid + 1;
     }
   }
 
-  return position;
+  return null;
 }
+
 console.log("O(log n)");
 console.log("Iterative method");
-console.log("Result =", binarySearch(array, 15));
+console.log("Result =", binarySearch(array, 3));
 console.log("Count =", count);
 
 //////////////////////////////
 console.log("==============");
 //////////////////////////////
 
-function recursiveBinarySearch(array, item, start, end) {
-  let middle = Math.floor((start + end) / 2);
+function recursiveBinarySearch(array, item, low, high) {
+  let mid = Math.floor((low + high) / 2);
+  let guess = array[mid];
 
-  if (item === array[middle]) {
-    return middle;
+  if (guess === item) {
+    return mid;
   }
 
-  if (item < array[middle]) {
-    return recursiveBinarySearch(array, item, start, middle - 1);
+  if (guess > item) {
+    return recursiveBinarySearch(array, item, low, mid - 1);
   } else {
-    return recursiveBinarySearch(array, item, middle + 1, end);
+    return recursiveBinarySearch(array, item, mid + 1, high);
   }
 }
 
