@@ -43,10 +43,12 @@ function recursiveBinarySearch(array, item, low, high) {
 
   if (guess > item) {
     return recursiveBinarySearch(array, item, low, mid - 1);
-  } else {
+  } else if (guess < item) {
     return recursiveBinarySearch(array, item, mid + 1, high);
+  } else {
+    return null;
   }
 }
 
 console.log("Recursive method");
-console.log("Result =", recursiveBinarySearch(array, 15, 0, array.length));
+console.log("Result =", recursiveBinarySearch(array, 3, 0, array.length));
