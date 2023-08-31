@@ -1,6 +1,6 @@
 "use strict";
 
-const arr = [
+const array = [
   0, 3, 2, 5, 6, 8, 23, 9, 4, 2, 1, 2, 9, 6, 4, 1, 7, -1, -5, 23, 6, 2, 35, 6,
   3, 32, 9, 4, 2, 1, 2, 9, 6, 4, 1, 7, -1, -5, 23, 9, 4, 2, 1, 2, 9, 6, 4, 1, 7,
   -1, -5, 23,
@@ -26,6 +26,6 @@ function selectionSort(array) {
 }
 
 console.log("O(n * n)");
-console.log("Length =", arr.length);
-console.log("Result =", selectionSort(arr));
+console.log("Length =", array.length);
+console.log("Result =", selectionSort(array));
 console.log("Count =", count);

@@ -25,9 +25,9 @@ function binarySearch(array, item) {
 }
 
 console.log("O(log n)");
+console.log("==============");
 console.log("Iterative method");
 console.log("Result =", binarySearch(array, 3));
-console.log("Count =", count);
 
 //////////////////////////////
 console.log("==============");
@@ -52,3 +52,5 @@ function recursiveBinarySearch(array, item, low, high) {
 
 console.log("Recursive method");
 console.log("Result =", recursiveBinarySearch(array, 3, 0, array.length));
+console.log("==============");
+console.log("Count =", count);
