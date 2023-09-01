@@ -32,7 +32,6 @@ function search(name) {
       search_queue = search_queue.concat(graph[person]);
 
       searched.push(person);
-      console.log(search_queue);
     }
   }
 
@@ -40,4 +39,5 @@ function search(name) {
   return false;
 }
 
+console.log("O(V+E)");
 search("you");
